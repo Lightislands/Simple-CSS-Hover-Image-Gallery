@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" " />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple css hover image Gallery</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<style>
+    .simple_gallery {
+        height: 571px;
+        width: 1225px;
+        position:relative;
+        margin: 0 auto;
+    }
+    /* First displayed image */
+    .gallery-bg {
+        display: block;
+        margin-left: 35px;
+        position: absolute;
+    }
+    .simple_gallery img {
+        border: 10px solid #f2f2f2;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+        box-sizing: initial;
+    }
+    /* Thumbnails */
+    .simple_gallery a > img {
+        margin-bottom: 6px;
+        float:right;
+        width: 117px;
+        height: 88px;
+        display: block;
+        clear: both;
+    }
+    /* Large rollover image styles */
+    .simple_gallery span{
+        visibility:hidden;
+        position:absolute;
+        width: 571px;
+        height: 451px;
+        left:-1000px;    /* prevents the browser to show scroll bar at bottom*/
+    }
+    .simple_gallery a:link span, .simple_gallery a:visited span, .simple_gallery a:active span {
+        visibility:hidden;
+    }
+    .simple_gallery a:hover span{
+        /*CSS for enlarged image*/
+        visibility: visible;
+        position: absolute;
+        left: 35px;
+        /*position where enlarged image is placed horizontally */
+        top: 0;
+        z-index: 50;
+    }
+</style>
+<div class="simple_gallery">
+    <img class="gallery-bg" src="https://farm2.static.flickr.com/1529/26461370381_aa0678ca0e_b.jpg" alt="dildo" />
+    <a href="#">
+        <img src="https://farm2.static.flickr.com/1650/26513810135_66a33e5509_b.jpg" />
+        <span><img src="https://farm2.static.flickr.com/1650/26513810135_66a33e5509_b.jpg" /></span>
+    </a>
+
+    <a href="#">
+        <img src="https://farm2.static.flickr.com/1613/25925447583_53de0f8781_b.jpg" />
+        <span><img src="https://farm2.static.flickr.com/1613/25925447583_53de0f8781_b.jpg" /></span>
+    </a>
+
+    <a href="#">
+        <img src="https://farm2.static.flickr.com/1688/26425009852_bd159c0be8_b.jpg" />
+        <span><img src="https://farm2.static.flickr.com/1688/26425009852_bd159c0be8_b.jpg" /></span>
+    </a>
+
+    <a href="#">
+        <img src="https://farm2.static.flickr.com/1519/26437091662_c6b5b15ccb_b.jpg" />
+        <span><img src="https://farm2.static.flickr.com/1519/26437091662_c6b5b15ccb_b.jpg" /></span>
+    </a>
+</div>
+
+
+</body>
+</html>
